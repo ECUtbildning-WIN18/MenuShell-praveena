@@ -11,7 +11,7 @@ namespace Menu.View
         public ConsoleKeyInfo Display()
         {
             Console.WriteLine("Admin Menu");
-            Console.WriteLine("(1).Add Users");            
+            Console.WriteLine("(1).Manage Users");            
             Console.WriteLine("(2).Exit");           
 
             return Console.ReadKey();

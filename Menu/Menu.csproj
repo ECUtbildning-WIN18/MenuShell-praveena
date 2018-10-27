@@ -48,7 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthenticateService.cs" />
     <Compile Include="Services\IAuthenticateService.cs" />
+    <Compile Include="View\DeleteUserView.cs" />
     <Compile Include="View\LoginView.cs" />
+    <Compile Include="View\ManageUserView.cs" />
     <Compile Include="View\ReceptionistMainMenu.cs" />
     <Compile Include="View\AddUserView.cs" />
     <Compile Include="View\ListUserView.cs" />

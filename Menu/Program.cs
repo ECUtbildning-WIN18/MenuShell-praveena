@@ -30,7 +30,8 @@ namespace Menu
 
                     if (selection.Key == ConsoleKey.D1)
                     {
-                        AddUserView.Display(users);
+                        ManageUserView.Display(users);                        
+                        
                     }
                     else if (selection.Key == ConsoleKey.D2)
                     {

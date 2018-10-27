@@ -11,8 +11,7 @@ namespace Menu.View
     {
         
         public static void  Display(List<User> users)
-        {
-            string result;
+        {            
             while(true)
             {
                 Console.Clear();                
@@ -26,14 +25,14 @@ namespace Menu.View
                 string Role = Console.ReadLine();
 
                 Console.WriteLine("Do you want to Save? (Y)es,(N)o");
-                result = Console.ReadLine();
+                var result = Console.ReadKey(true);
 
-                if(result == "Y")
+                if(result.Key == ConsoleKey.Y)
                 {
                     users.Add(new User(UserName,Password,Role));
                     return;
                 }
-                else if(result == "N")
+                else if(result.Key == ConsoleKey.N)
                 {
                     Environment.Exit(0);
                 }
