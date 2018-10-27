@@ -48,11 +48,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthenticateService.cs" />
     <Compile Include="Services\IAuthenticateService.cs" />
+    <Compile Include="View\DeleteUserView.cs" />
     <Compile Include="View\LoginView.cs" />
+    <Compile Include="View\ManageUserView.cs" />
     <Compile Include="View\ReceptionistMainMenu.cs" />
     <Compile Include="View\AddUserView.cs" />
     <Compile Include="View\ListUserView.cs" />
     <Compile Include="View\AdminView.cs" />
+    <Compile Include="View\SearchUserView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

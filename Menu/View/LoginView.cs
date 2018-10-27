@@ -26,12 +26,6 @@ namespace Menu.View
 
             Console.Write("Password: ");
             string password = Console.ReadLine();
-
-            Console.WriteLine("\nIs this correct? (Y)es (N)o");
-            string keyInfo = Console.ReadLine();
-                                   
-            if (keyInfo=="Y" && keyInfo=="y")
-            {
                 var authenticateService = new AuthenticateService();
                 var user = authenticateService.Authenticate(_users, username, password);
                 if (user != null)
@@ -39,7 +33,7 @@ namespace Menu.View
                     Console.WriteLine("Successfully logged in!");
                     Thread.Sleep(2000);
                     Console.Clear();
-                    Console.WriteLine($"Role{user.Role}");
+                    Console.WriteLine($"Role: {user.Role}");
                     return user;
                 }
                 else
@@ -49,23 +43,8 @@ namespace Menu.View
                     Console.Clear();
                     Display();
                 }
-            }
-            else if(keyInfo=="N")
-            {
-                Console.Clear();
-                Console.WriteLine("Enter Valid Credentials");
-                Display();
-            }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine("Wrong input please try again!");
-                Display();
-                
-            }
-
             Console.ReadKey();
-            
+            return user;
         }
        
 

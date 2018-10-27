@@ -9,9 +9,8 @@ namespace Menu.Services
 {
     class AuthenticateService : IAuthenticateService
     {
-        public User Authenticate(List<User> users, string username, string password)          //Metod: kontroll av anvnamn och password
+        public User Authenticate(List<User> users, string username, string password)          
         {
-            return users.FirstOrDefault(x => x.Username == username && x.Password == password); //använder LINQ. kollar om det stämmer
-        }
+            return users.FirstOrDefault(x => x.Username == username && x.Password == password);        }
     }
 }

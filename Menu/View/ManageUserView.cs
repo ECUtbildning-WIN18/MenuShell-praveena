@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 
 namespace Menu.View
 {
-    class AdminView 
+    class ManageUserView
     {       
         public ConsoleKeyInfo Display()
         {
-            Console.WriteLine("Admin Menu");
-            Console.WriteLine("(1).Manage Users");            
-            Console.WriteLine("(2).Exit");
+            Console.Clear();
+            Console.WriteLine("Manage Users Menu");
+            Console.WriteLine("(1).Add User");
+            Console.WriteLine("(2).Search User");
             return Console.ReadKey();
-            
         }
+         
     }
 }

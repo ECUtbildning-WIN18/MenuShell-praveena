@@ -18,6 +18,7 @@ namespace Menu
             {
                 users.Add(new User(userName: "John", password: "hello", role: "administrator"));
                 users.Add(new User(userName: "Jane", password: "hi", role: "Recep"));
+                users.Add(new User(userName: "Jim", password: "secret", role: "administrator"));                
             }
             var logInView = new LoginView(users);
             while (true)
@@ -30,7 +31,22 @@ namespace Menu
 
                     if (selection.Key == ConsoleKey.D1)
                     {
-                        AddUserView.Display(users);
+                        var manageUserView =new ManageUserView();
+                        var choice=manageUserView.Display();
+                        if(choice.Key==ConsoleKey.D1)
+                        {
+                            AddUserView.Display(users);
+                        }
+                        else if(choice.Key==ConsoleKey.D2)
+                        {                            
+                            SearchUserView.Display(users);                            
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Invalid Selection");
+                            manageUserView.Display();
+                        }
                     }
                     else if (selection.Key == ConsoleKey.D2)
                     {

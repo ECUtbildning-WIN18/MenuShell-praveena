@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 namespace Menu.View
 {
     class AddUserView
-    {
-        
+    {        
         public static void  Display(List<User> users)
-        {
-            string result;
+        {           
             while(true)
             {
                 Console.Clear();                
@@ -22,18 +20,18 @@ namespace Menu.View
 
                 Console.Write("Password: ");
                 string Password = Console.ReadLine();
-                Console.WriteLine("Role: ");
+                Console.Write("Role: ");
                 string Role = Console.ReadLine();
 
                 Console.WriteLine("Do you want to Save? (Y)es,(N)o");
-                result = Console.ReadLine();
-
-                if(result == "Y")
+                
+                var result = Console.ReadKey(true);
+                if(result.Key==ConsoleKey.Y)
                 {
                     users.Add(new User(UserName,Password,Role));
-                    return;
+                    Console.ReadLine();
                 }
-                else if(result == "N")
+                else if(result.Key==ConsoleKey.N)
                 {
                     Environment.Exit(0);
                 }
@@ -44,7 +42,6 @@ namespace Menu.View
                 }
 
             }
-
            
         }
 
